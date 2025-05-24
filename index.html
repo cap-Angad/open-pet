@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenPet - Adopt & List Street Pets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+           <!-- <img src="assets/logo.png" alt="OpenPet Logo">-->
+            <span>OpenPet</span>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#adopt">Adopt</a>
+            <a href="#list">List Pet</a>
+            <a href="#donate">Donate</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Give a Street Pet a Loving Home</h1>
+            <p>Adopt or list street pets in need of care and shelter</p>
+            <div class="hero-buttons">
+                <button class="adopt-btn">Adopt a Pet</button>
+                <button class="list-btn">List a Pet</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets\pets/dog.jpg" alt="street dog">
+        </div>
+    </section>
+
+    <!-- Featured Pets Section -->
+    <section id="featured" class="featured-pets">
+        <h2>Featured Pets</h2>
+        <div class="pet-filters">
+            <select id="petType">
+                <option value="all">All Pets</option>
+                <option value="dog">Dogs</option>
+                <option value="cat">Cats</option>
+                <option value="puppy">Puppies</option>
+                <option value="kitten">Kittens</option>
+            </select>
+            <select id="age">
+                <option value="all">All Ages</option>
+                <option value="baby">Baby (0-6 months)</option>
+                <option value="young">Young (6-12 months)</option>
+                <option value="adult">Adult (1-7 years)</option>
+                <option value="senior">Senior (7+ years)</option>
+            </select>
+            <input type="text" placeholder="Enter location" id="location">
+        </div>
+        <div class="pet-grid" id="petGrid">
+            <!-- Pet cards will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- List Pet Section -->
+    <section id="list" class="list-pet">
+        <h2>List a Pet for Adoption</h2>
+        <form id="listPetForm" class="list-form">
+            <div class="form-group">
+                <label for="petName">Pet Name</label>
+                <input type="text" id="petName" required>
+            </div>
+            <div class="form-group">
+                <label for="petType">Pet Type</label>
+                <select id="petType" required>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="puppy">Puppy</option>
+                    <option value="kitten">Kitten</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="petAge">Age</label>
+                <input type="number" id="petAge" required>
+            </div>
+            <div class="form-group">
+                <label for="petLocation">Location</label>
+                <input type="text" id="petLocation" required>
+            </div>
+            <div class="form-group">
+                <label for="petDescription">Description</label>
+                <textarea id="petDescription" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="petImage">Upload Image</label>
+                <input type="file" id="petImage" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="contactInfo">Contact Information</label>
+                <input type="tel" id="contactInfo" required>
+            </div>
+            <button type="submit" class="submit-btn">List Pet</button>
+        </form>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donation">
+        <h2>Support Street Animals</h2>
+        <div class="donation-content">
+            <div class="donation-info">
+                <h3>Your Donation Helps</h3>
+                <ul>
+                    <li><i class="fas fa-heart"></i> Rescue injured animals</li>
+                    <li><i class="fas fa-syringe"></i> Provide medical treatment</li>
+                    <li><i class="fas fa-shield-virus"></i> Vaccination programs</li>
+                </ul>
+                
+            </div>
+            <div class="qr-section">
+                <img src="assets\pets\Thanks.png" alt="Donation QR Code">
+                <p>Scan to donate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>OpenPet</h3>
+                <p>Making the world better for street animals</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#adopt">Adopt</a>
+                <a href="#list">List Pet</a>
+                <a href="#donate">Donate</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@openpet.com.np</p>
+                <p>Phone: +91 9818000000</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 OpenPet. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
